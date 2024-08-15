@@ -1,0 +1,107 @@
+<?xml version="1.0"?>
+<materials>
+  <material name="LSO">
+    <propertiestable>
+      <property name="SCINTILLATIONYIELD" value="26000" unit="1/MeV"/>
+      <property name="RESOLUTIONSCALE" value="4.41"/>
+      <property name="FASTTIMECONSTANT" value="40" unit="ns"/>
+      <property name="YIELDRATIO" value="1"/>
+      <propertyvector name="FASTCOMPONENT" energyunit="eV">
+	<ve energy="2.95167" value="1"/>
+      </propertyvector>
+      <propertyvector name="ABSLENGTH" unit="m" energyunit="eV">
+	<ve energy="6.95" value="50"/>
+	<ve energy="1.84" value="50"/>
+      </propertyvector>
+      <propertyvector name="RINDEX" energyunit="eV">
+	<ve energy="6.95" value="1.82"/>
+	<ve energy="1.84" value="1.82"/>
+      </propertyvector>
+    </propertiestable>
+  </material>
+  
+  <material name="LXenon">
+    <propertiestable>
+      <property name="SCINTILLATIONYIELD" value="4167" unit="1/MeV"/>
+      <property name="RESOLUTIONSCALE" value="4."/>
+      <property name="SLOWTIMECONSTANT" value="27" unit="ns"/>
+      <property name="FASTTIMECONSTANT" value="2.2" unit="ns"/>
+      <property name="YIELDRATIO" value="0.25"/>
+      <propertyvector name="FASTCOMPONENT" energyunit="eV">
+	<ve energy="6.95" value="1"/>
+      </propertyvector>
+      <propertyvector name="SLOWCOMPONENT" energyunit="eV">
+	<ve energy="6.95" value="1"/>
+      </propertyvector>
+      <propertyvector name="ABSLENGTH" unit="m" energyunit="eV">
+	<ve energy="6.95" value="10"/>
+	<ve energy="1.84" value="10"/>
+      </propertyvector>
+      <propertyvector name="RAYLEIGH" unit="m" energyunit="eV">
+	<ve energy="6.95" value="10"/>
+	<ve energy="1.84" value="10"/>
+      </propertyvector>
+      <propertyvector name="RINDEX" energyunit="eV">
+	<ve energy="6.95" value="1.61"/>
+	<ve energy="1.84" value="1.61"/>
+      </propertyvector>
+    </propertiestable>
+  </material>
+  
+  <material name="Air">  
+    <propertiestable>
+      <propertyvector name="ABSLENGTH" unit="m" energyunit="eV">
+	<ve energy="6.95" value="50"/>
+	<ve energy="1.84" value="50"/>
+      </propertyvector>
+      <propertyvector name="RINDEX" energyunit="eV">
+	<ve energy="6.95" value="1.000277"/>
+	<ve energy="1.84" value="1.000277"/>
+      </propertyvector>
+    </propertiestable>
+  </material>
+
+  <material name="Epoxy">
+    <propertiestable>
+      <propertyvector name="ABSLENGTH" unit="m" energyunit="eV">
+	<ve energy="6.95" value="50"/>
+	<ve energy="1.84" value="50"/>
+      </propertyvector>
+      <propertyvector name="RINDEX" energyunit="eV">
+	<ve energy="6.95" value="1.5"/>
+	<ve energy="1.84" value="1.5"/>
+      </propertyvector>
+    </propertiestable>
+  </material>
+  
+  <material name="Quartz">
+    <propertiestable>
+      <propertyvector name="ABSLENGTH" unit="m" energyunit="eV">
+	<ve energy="6.95" value="50"/>
+	<ve energy="1.84" value="50"/>
+      </propertyvector>
+      <propertyvector name="RINDEX" energyunit="eV">
+	<ve energy="6.95" value="1.6"/>
+	<ve energy="1.84" value="1.6"/>
+      </propertyvector>
+    </propertiestable>
+  </material>
+   
+  <material name="Bialkali">
+    <propertiestable>
+      <propertyvector name="ABSLENGTH" unit="mm" energyunit="eV">
+	<ve energy="6.95" value="0.0001"/>
+	<ve energy="1.84" value="0.0001"/>
+      </propertyvector>
+      <propertyvector name="RINDEX" energyunit="eV">
+	<ve energy="6.95" value="1.6"/>
+	<ve energy="1.84" value="1.6"/>
+      </propertyvector>
+    </propertiestable>
+  </material>
+
+  
+  
+  
+</materials>
+

@@ -1,0 +1,123 @@
+#####################################
+###                               ###
+###   V I S U A L I S A T I O N   ###
+###                               ###
+#####################################
+#/control/execute /homes/ymellak/Direct3G_f/Gate/Simulations_macros/visu.mac
+
+#############################
+###                       ###
+###   V E R B O S I T Y	  ###
+###                       ###
+#############################
+/control/verbose     0 # Pour afficher le contenu des macros.
+/control/saveHistory
+/run/verbose         0
+/tracking/verbose    0
+/event/verbose       0
+
+#/gate/application/setTotalNumberOfPrimaries 100
+###########################
+###                     ###
+###   M A T E R I A L   ###
+###                     ###
+###########################
+/gate/geometry/setMaterialDatabase /homes/ymellak/Direct3G_f/Gate/Simulations_macros/GateMaterials_Xemis.db
+
+#####################
+###               ###
+###   W O R L D   ###
+###               ###
+#####################
+/gate/world/geometry/setXLength 500 cm
+/gate/world/geometry/setYLength 500 cm
+/gate/world/geometry/setZLength 500 cm
+/gate/world/setMaterial         Air
+/gate/world/vis/setVisible      0
+/gate/world/vis/forceSolid
+/gate/world/vis/setColor white
+
+#######################
+###                 ###
+###   C A M E R A   ###
+###                 ###
+#######################
+/control/execute /homes/ymellak/Direct3G_f/Gate/Simulations_macros/mMR_scanner.mac
+
+#########################
+###                   ###
+###   P H A N T O M   ###
+###                   ###
+#########################
+/control/execute /homes/ymellak/Gamma3DataExtraction/XCatSimulations/Phantoms/Phantom{simu_number}/Macro_Attenuation.mac
+
+#########################
+###                   ###
+###   P H Y S I C S   ###
+###                   ###
+#########################
+
+/control/execute /homes/ymellak/Direct3G_f/Gate/Simulations_macros/my_physics.mac
+
+#############################
+###                       ###
+###   T P C   A C T O R   ###
+###                       ###
+#############################
+#/control/execute macros/actor_tpc.mac 
+#/control/execute /homes/ymellak/Direct3G_f/Gate/Simulations_macros/phase_space_actor.mac
+
+###############################
+###                         ###
+###   I N I T I A L I Z E   ###
+###                         ###
+###############################
+/gate/run/initialize
+/gate/physics/displayCuts
+
+
+#############################
+###                       ###
+###   D I G I T I Z E R   ###
+###                       ###
+#############################
+#/gate/digitizer/verbose 0
+#/control/execute macros/digitizer_deb.mac
+#/control/execute macros/digitizer_ionisation.mac
+#/control/execute macros/digitizer_scintillation.mac
+
+
+#######################
+###                 ###
+###   S O U R C E   ###
+###                 ###
+#######################
+
+/control/execute /homes/ymellak/Gamma3DataExtraction/XCatSimulations/Phantoms/Phantom{simu_number}/Macro_Source.mac
+
+#########################
+###                   ###
+###   O U T P U T S   ###
+###                   ###
+#########################
+/control/execute /homes/ymellak/Direct3G_f/Gate/Simulations_macros/outputs_batch_01.mac
+
+
+#######################
+###                 ###
+###   R A N D O M   ###
+###                 ###
+#######################
+/gate/random/setEngineSeed auto
+
+
+#################################
+###                           ###
+###   A C Q U I S I T I O N   ###
+###                           ###
+#################################
+/gate/application/setTimeSlice 0.01 s
+/gate/application/setTimeStart 0.00 s
+/gate/application/setTimeStop  0.01 s # 0.01
+/gate/application/start
+

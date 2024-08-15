@@ -1,0 +1,17 @@
+#	S O U R C E 3
+/gate/source/addSource voxel voxel
+/gate/source/voxel/reader/insert image
+/gate/source/voxel/imageReader/translator/insert range
+/gate/source/voxel/imageReader/rangeTranslator/readTable  /homes/ymellak/Direct3G_f/Gate/Phantoms/Phantom999/activities_xcat.dat
+/gate/source/voxel/imageReader/rangeTranslator/describe 1
+/gate/source/voxel/setPosition    -300 -300 -150 mm 
+/gate/source/voxel/imageReader/readFile /homes/ymellak/Direct3G_f/Gate/Phantoms/Phantom999/Phan999_Activity.h33
+## Gallium-68 ion
+/gate/source/voxel/gps/particle          ion 
+/gate/source/voxel/gps/ion               21 44 0 0 
+/gate/source/voxel/gps/energytype        Mono
+/gate/source/voxel/gps/monoenergy        0.0 keV
+/gate/source/voxel/setForcedUnstableFlag true
+/gate/source/voxel/setForcedHalfLife     6586.26 s #14551.2 s
+/gate/source/voxel/gps/angtype           iso
+/gate/source/list

@@ -1,0 +1,39 @@
+#===================================================
+# SCANNER mMR, as sphere to detect all events :)
+#===================================================
+# Youness Mellak
+
+
+
+# Creation du monde 
+/gate/world/geometry/setXLength 1800. mm
+/gate/world/geometry/setYLength 1800. mm
+/gate/world/geometry/setZLength 3000. mm
+/gate/world/setMaterial         Air
+/gate/world/vis/setVisible      0
+/gate/world/vis/forceSolid
+/gate/world/vis/setColor white
+
+
+
+#     T E T E
+/gate/world/daughters/name				cylindricalPET		
+/gate/world/daughters/insert 				cylinder		
+/gate/cylindricalPET/setMaterial 			LXenon #LSO			
+/gate/cylindricalPET/geometry/setRmax 			100.8 cm			
+/gate/cylindricalPET/geometry/setRmin 			32.8 cm  		
+/gate/cylindricalPET/geometry/setHeight 		80 cm
+/gate/cylindricalPET/vis/forceWireframe
+
+
+
+#	A T T A C H    S Y S T E M 
+
+/gate/cylindricalPET/attachCrystalSD
+
+/gate/systems/cylindricalPET/describe
+
+
+
+
+

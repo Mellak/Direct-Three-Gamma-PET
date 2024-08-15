@@ -1,0 +1,381 @@
+
+*** DYNAMIC XCAT PHANTOM, version 2.0 in C***
+--------------------------------------------
+-----------------------------------------------
+ PARAMETERS: (dynamic XCAT version 2.0 in C)
+-----------------------------------------------
+act_phan_each = 1  (activity phantom each frame saved)
+act_phan_ave = 0 (time-average activity phantom NOT saved)
+atten_phan_each = 0  (atten. coeff. phantom frames NOT saved)
+atten_phan_ave = 0 (time-average atten. coeff. phantom NOT saved)
+Beating heart motion included only
+Total Output Period =       1.0000 secs
+Total Output Frames = 1
+ ==>Time Per Frame =       1.0000 secs
+
+beating heart period =       1.0000 secs
+Respiratory period =       5.0000 secs
+maximum diaphragm motion =       2.0000
+heart scale x =       1.0000
+heart scale y =       1.0000
+heart scale z =       1.0000
+phantom height scale =       1.0000
+phantom long axis scale =       1.0000
+phantom short axis scale =       1.0000
+head height scale =       1.0000
+head x scale =       1.0000
+head y scale =       1.0000
+head skin x scale =       1.0000
+head skin y scale =       1.0000
+torso long axis scale =       1.0000
+torso short axis scale =       1.0000
+abdomen long axis scale =       1.0000
+abdomen short axis scale =       1.0000
+arms length =       1.0000
+arms circumference scale =       1.0000
+arms skin circumference scale =       1.0000
+legs length =       1.0000
+legs circumference scale =       1.0000
+legs skin circumference  scale =       1.0000
+li_air_flag = 5
+si_air_flag = 1
+breast_type = 1    (prone position model)
+which_breast = 0   (no breasts, male)
+right breast_long_axis_scale =       1.0000
+right breast_short_axis_scale =       1.0000
+right breast_height_scale =       1.0000
+left breast_long_axis_scale =       1.0000
+left breast_short_axis_scale =       1.0000
+left breast_height_scale =       1.0000
+rdiaph_liv_scale =       1.0000
+ldiaph_scale =       1.0000
+ pixel width =  0.3000 (cm/pixel)
+ slice width =  0.3000 (cm/pixel)
+ voxel volume (pixel width^2)(slice_width) =  0.027000 ml
+ array_size = 200
+ subvoxel_index = 1 => 1 subvoxels per voxel
+ starting slice number    = 400
+ ending slice number      = 499
+ 
+Main orientation of heart:
+    zy_rotation (beta)=    0.00 (deg)
+    xz_rotation ( phi)=    0.00 (deg)
+    yx_rotation ( psi)=    0.00 (deg)
+ 
+Translation of heart:
+    X translation     =    0.00  (cm)
+    Y translation     =    0.00  (cm)
+    Z translation     =    0.00  (cm)
+ 
+activity_unit = 0 (no scaling of activity values)
+ 
+radionuclide energy (keV)=     511.0000
+ 
+Calculating bones with a water fraction of 0.500000
+Linear Attenuation Coefficients (1/cm):
+   Body (water)   =       0.0960
+   Muscle         =       0.0999
+   Adipose (fat)  =       0.0889
+   Lung           =       0.0285
+   Spine Bone     =       0.1132
+   Rib Bone       =       0.1338
+   Blood          =       0.1008
+   Heart          =       0.1000
+   Kidney         =       0.1000
+   Liver          =       0.1008
+   Lymph          =       0.0985
+   Pancreas       =       0.0993
+   Spleen         =       0.1009
+   Intestine      =       0.0983
+   Skull          =       0.1210
+   Cartilage      =       0.1040
+   Brain          =       0.0993
+   Iodine blood   =       0.1038
+   Skin           =       0.1038
+   Eye Lens       =       0.1012
+   Ovary          =       0.1001
+   Red Marrow     =       0.0982
+   Yellow Marrow  =       0.0942
+   Testis         =       0.0993
+   Thyroid        =       0.1001
+   Bladder        =       0.0992
+
+Linear Attenuation Coefficients (1/pixel):
+   Body (water)   =       0.0288
+   Muscle         =       0.0300
+   Adipose (fat)  =       0.0267
+   Lung           =       0.0086
+   Spine Bone     =       0.0340
+   Rib Bone       =       0.0401
+   Blood          =       0.0302
+   Heart          =       0.0300
+   Kidney         =       0.0300
+   Liver          =       0.0302
+   Lymph          =       0.0295
+   Pancreas       =       0.0298
+   Spleen         =       0.0303
+   Intestine      =       0.0295
+   Skull          =       0.0363
+   Cartilage      =       0.0312
+   Brain          =       0.0298
+   Iodine Blood   =       0.0311
+   Skin           =       0.0312
+   Eye Lens       =       0.0304
+   Ovary          =       0.0300
+   Red Marrow     =       0.0295
+   Yellow Marrow  =       0.0283
+   Testis         =       0.0298
+   Thyroid        =       0.0300
+   Bladder        =       0.0298
+
+---------------------------------------------------
+
+Activity Ratios
+-----------------------------------------------------------------
+myoLV_act = 59.000000
+myoRV_act = 60.000000
+myoLA_act = 61.000000
+myoRA_act = 62.000000
+bldplLV_act = 63.000000
+bldplRV_act = 64.000000
+bldplLA_act = 65.000000
+bldplRA_act = 66.000000
+body_activity = 10.000000
+rbreast_activity = 11.000000
+lbreast_activity = 11.000000
+muscle_activity = 13.000000
+brain_activity = 21.000000
+liver_activity = 57.000000
+gall_bladder_activity = 58.000000
+right lung_activity = 1.000000
+left lung_activity = 2.000000
+esophagus_activity = 70.000000
+esophagus_contents_activity = 71.000000
+laryngopharynx_activity = 72.000000
+st_wall_activity = 74.000000
+st_cnts_activity = 75.000000
+pancreas_activity = 76.000000
+right kidney_cortex_activity = 77.000000
+right kidney_medulla_activity = 77.000000
+left kidney_cortex_activity = 77.000000
+left kidney_medulla_activity = 77.000000
+adrenal_activity = 77.000000
+right renal_pelvis_activity = 77.000000
+left renal_pelvis_activity = 77.000000
+spleen_activity = 78.000000
+rib_activity = 5.000000
+cortical_bone_activity = 6.000000
+spine_activity = 7.000000
+bone_marrow_activity = 9.000000
+art_activity = 14.000000
+vein_activity = 15.000000
+bladder_activity = 79.000000
+prostate_activity = 80.000000
+asc_large_intest_activity = 81.000000
+trans_large_intest_activity = 81.000000
+desc_large_intest_activity = 81.000000
+small_intest_activity = 81.000000
+rectum_activity = 81.000000
+sem_activity = 82.000000
+vas_def_activity = 82.000000
+test_activity = 82.000000
+epididymus_activity = 82.000000
+ejac_duct_activity = 82.000000
+pericardium_activity = 69.000000
+cartilage_activity = 16.000000
+intest_air_activity = 3.000000
+ureter_activity = 82.000000
+urethra_activity = 82.000000
+lymph_activity = 17.000000
+lymph_abnormal_activity = 18.000000
+trach_bronch_activity = 19.000000
+airway_activity = 4.000000
+uterus_activity = 82.000000
+vagina_activity = 82.000000
+right_ovary_activity = 82.000000
+left_ovary_activity = 82.000000
+fallopian_tubes_activity = 82.000000
+parathyroid_activity = 83.000000
+thymus_activity = 85.000000
+salivary_activity = 86.000000
+pituitary_activity = 23.000000
+eye_activity = 20.000000
+Corpus_Callosum_act = 24.000000
+Caudate_act = 25.000000
+Internal_capsule_act = 26.000000
+Putamen_act = 27.000000
+Globus_pallidus_act = 28.000000
+Thalamus_act = 29.000000
+Fornix_act = 30.000000
+Anterior_commissure_act = 31.000000
+Amygdala_act = 32.000000
+Hippocampus_act = 33.000000
+Lateral_ventricle_act = 34.000000
+Third_ventricle_act = 35.000000
+Fourth_ventricle_act = 36.000000
+Cerebral_aqueduct_act = 37.000000
+Mamillary_bodies_act = 38.000000
+Cerebral_peduncles_act = 39.000000
+Superior_colliculus_act = 40.000000
+Inferior_colliculus_act = 41.000000
+Pineal_gland_act = 42.000000
+Periacquaductal_grey_outer_act = 43.000000
+Periacquaductal_grey_act = 44.000000
+Pons_act = 45.000000
+Superior_cerebellar_peduncle_act = 46.000000
+Middle_cerebellar_peduncle_act = 47.000000
+Substantia_nigra_act = 48.000000
+Medulla_act = 49.000000
+Medullary_pyramids_act = 50.000000
+Inferior_olive_act = 51.000000
+Tegmentum_of_midbrain_act = 52.000000
+Midbrain_act = 53.000000
+cerebellum_act = 54.000000
+white_matter_act = 55.000000
+grey_matter_act = 56.000000
+lens_activity = 20.000000
+lesn_activity = 400.000000
+-----------------------------------------------------------------
+-----------------Phantom Dimensions------------------
+Total Body
+  Height             1752.3262 mm
+Head
+  Short axis (AP)     207.1844 mm
+  Long axis (LAT)     155.9293 mm
+  Circumference       590.8525 mm
+Chest
+  Short axis (AP)     232.1896 mm
+  Long axis (LAT)     325.2440 mm
+  Circumference       993.6165 mm
+Waist
+  Short axis (AP)     233.3064 mm
+  Long axis (LAT)     288.9887 mm
+Arms
+  Length (shoulder to wrist)      593.2043 mm
+Arms (upper, midpoint)
+  Short axis (AP)     110.1922 mm
+  Long axis (LAT)      95.3863 mm
+  Circumference       333.3550 mm
+Arms (lower, midpoint)
+  Short axis (AP)      76.1145 mm
+  Long axis (LAT)      66.7673 mm
+  Circumference       237.9090 mm
+Legs
+  Length (from crotch)    1549.8556 mm
+Legs (Thigh, below buttocks)
+  Short axis (AP)     183.1309 mm
+  Long axis (LAT)     175.2761 mm
+  Circumference       572.0107 mm
+Legs (Calf, below knee)
+  Short axis (AP)     107.5007 mm
+  Long axis (LAT)     105.7886 mm
+  Circumference       332.0074 mm
+Rib Cage
+  Short axis (AP)     194.1304 mm
+  Long axis (LAT)     262.5328 mm
+Right Diaphragm
+  Height               97.0000 mm
+Left Diaphragm
+  Height               71.5473 mm
+Breasts (prone)
+  Short axis (AP)      22.4000 mm
+  Long axis (LAT)      34.6757 mm
+  Height               42.8400 mm
+Breasts (supine)
+  Short axis (AP)      22.4000 mm
+  Long axis (LAT)      34.6757 mm
+  Height               42.8400 mm
+-----------------------------------------------------
+----------------Heart Orientation Angles-------------
+  YX_rotation -52.055725
+  XZ_rotation -27.128662
+  ZY_rotation -104.385468
+-----------------------------------------------------
+-------------LV Size (Diastole)----------
+  Length	     96.5130 mm's
+  Radius         31.8726 mm's
+-----------------------------------------
+-------------LV Size (Systole)----------
+  Length         85.4235 mm's
+  Radius         28.6712 mm's
+-----------------------------------------
+-------------LV Volumes at Different Phases----------
+  V1 (end-diastole)               132.1859 mL
+  V2 (end-systole)                 50.5650 mL
+  V3 (beg. quiet phase)            82.7739 mL
+  V4 (end quiet phase)            109.7527 mL
+  V5 (red. filling, diastole)     123.3906 mL
+-----------------------------------------------------
+
+RESPIRATION PARAMETERS ------------------------
+diaphragm motion    =    0.00 mm
+delta AP diameter =    0.00 mm
+
+
+--------------------------------------------------
+--------------------------------------------------
+CREATING FRAME #1 ...
+
+Time =   0.000 seconds
+Current heart phase index =   0.000 (LV fully relaxed, i.e. end-diastole)
+Current resp phase index  =   0.000 (full exhalation)
+ORGAN VOLUMES: 
+Total         =  19674.334868 ml
+skin          =      0.000000 ml
+skeleton      =   1187.757113 ml
+muscle        =   5433.777516 ml
+cartilage     =    210.411020 ml
+arteries      =    144.126014 ml
+veins         =    249.075024 ml
+lung tree     =     72.171007 ml
+marrow         =    529.335050 ml
+intestinal air =    139.401013 ml
+small intestine =    197.154019 ml
+large intestine =    193.374018 ml
+salivary glands =      0.000000 ml
+stomach contents =    254.016024 ml
+esophagus contents =     21.222002 ml
+right kidney =     12.906001 ml
+left kidney =     54.162005 ml
+larynx =      0.000000 ml
+internal_carotid_right         =      3.428996 ml
+rlung         =   1360.677490 ml
+llung         =   1378.212891 ml
+liver         =   1623.708496 ml
+pancreas         =    109.513588 ml
+stomach         =    158.537735 ml
+esophagus         =     47.655613 ml
+musc908         =      0.108000 ml
+musc909         =      0.054000 ml
+cricoid_cart         =      0.297000 ml
+cricoid_cart         =      0.351000 ml
+conus_elasticus         =      0.027000 ml
+spleen         =    173.653702 ml
+gall_bladder         =     72.955009 ml
+r_adrenal         =     12.069052 ml
+l_adrenal         =     12.906065 ml
+l_renal_pelvis         =      1.916999 ml
+r_thyroid         =      8.450994 ml
+l_thyroid         =      9.585012 ml
+r_inf_parathyroid         =      0.081000 ml
+l_sup_parathyroid         =      0.027000 ml
+l_inf_parathyroid         =      0.054000 ml
+thymus         =     34.560406 ml
+---------------------------------------- 
+---------------------------------------- 
+
+Volume of LV myocardium =   109.837593 ml
+Volume of RV myocardium =    26.865286 ml
+Volume of LA myocardium =     9.720015 ml
+Volume of RA myocardium =    12.528059 ml
+Volume of LV chamber    =   150.682831 ml
+Volume of RV chamber    =   103.519493 ml
+Volume of LA chamber    =    40.851505 ml
+Volume of RA chamber    =    59.724804 ml
+----------------------------------------
+Volume of TOTAL HEART   =   930.771088 ml
+
+Maximum activity per voxel =      85.000000
+Total activity = 14569556.000000
+
+Saving activity phantom in file : /homes/ymellak/Gamma3DataExtraction/XCatSimulations/Phantoms/Phantom999/Phantom999_act_1

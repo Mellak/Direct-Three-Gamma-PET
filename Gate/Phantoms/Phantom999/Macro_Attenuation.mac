@@ -1,0 +1,9 @@
+# Choose a phantom volume name
+/gate/world/daughters/name phantom
+# Use a voxelized navigator
+/gate/world/daughters/insert ImageRegularParametrisedVolume #ImageRegularParametrisedVolume
+/gate/phantom/geometry/setRangeToMaterialFile /homes/ymellak/Direct3G_f/Gate/Phantoms/Phantom999/attenuation_range_xcat.dat
+/gate/phantom/geometry/setImage /homes/ymellak/Direct3G_f/Gate/Phantoms/Phantom999/Phan999_Attenuation.h33
+/gate/phantom/placement/setTranslation  0. 0. 0. mm
+/gate/phantom/attachPhantomSD
+/gate/phantom/setSkipEqualMaterials 1

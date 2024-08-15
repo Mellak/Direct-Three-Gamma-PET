@@ -1,0 +1,106 @@
+/gate/physics/addPhysicsList emstandard_opt4 #emstandard_opt3
+
+###################
+###   PHYSICS   ###
+###################
+/gate/physics/addProcess RadioactiveDecay
+#/gate/physics/addProcess Decay e+
+
+### POSITRONS
+/gate/physics/addProcess G4PositronAnnihilation e+
+/gate/physics/processes/G4PositronAnnihilation/setModel StandardModel
+
+### PHOTONS
+/gate/physics/addProcess PhotoElectric
+#/gate/physics/processes/PhotoElectric/setModel PenelopeModel
+#/gate/physics/processes/PhotoElectric/setAugerElectron true
+#/gate/physics/removeProcess PhotoElectric
+
+
+/gate/physics/addProcess Compton
+#/gate/physics/processes/Compton/setModel StandardModel # mhadi_note The number of hits with depth will be changed By using the penelope model.
+#/gate/physics/processes/Compton/setModel LivermoreModel
+#/gate/physics/processes/Compton/setModel PenelopeModel
+#/gate/physics/removeProcess Compton
+#/gate/physics/removeProcess Compton gamma
+#/gate/physics/removeProcess Bremsstrahlung gamma
+#/gate/physics/removeProcess RayleighScattering gamma
+#/gate/physics/removeProcess GammaConversion gamma
+#/gate/physics/removeProcess ElectronIonisation e+
+#/gate/physics/removeProcess ElectronIonisation e-
+#/gate/physics/removeProcess ElectronIonisation
+#/gate/physics/removeProcess IonIonisation
+
+
+#/gate/physics/addProcess GammaConversion
+#/gate/physics/processes/GammaConversion/setModel StandardModel 
+#/gate/physics/removeProcess GammaConversion
+
+
+#/gate/physics/addProcess RayleighScattering
+#/gate/physics/processes/RayleighScattering/setModel PenelopeModel
+#/gate/physics/removeProcess RayleighScattering
+### ELECTRONS
+#/gate/physics/addProcess ElectronIonisation
+#/gate/physics/processes/ElectronIonisation/setModel StandardModel e-
+#/gate/physics/processes/ElectronIonisation/setModel StandardModel e+
+#/gate/physics/removeProcess ElectronIonisation
+
+#/gate/physics/addProcess Bremsstrahlung
+#/gate/physics/processes/Bremsstrahlung/setModel StandardModel e-
+#/gate/physics/processes/Bremsstrahlung/setModel StandardModel e+
+
+#/gate/physics/addProcess eMultipleScattering e+
+#/gate/physics/addProcess eMultipleScattering e-
+
+### IONS
+/gate/physics/addProcess IonIonisation # This process is necessary for the des-excitation of the Ca44[1157.0]
+#/gate/physics/processes/IonIonisation/setModel StandardModel # mhadi_note
+
+#/gate/physics/addProcess HadronElastic Default
+#/gate/physics/processes/HadronElastic/setModel G4LElastic
+/gate/physics/removeProcess HadronElastic
+
+#/gate/physics/addProcess IonInelastic  Default
+#/gate/physics/processes/IonInelastic/setModel G4BinaryLightIonReaction Default
+#/gate/physics/processes/IonInelastic/G4BinaryLightIonReaction/setEmin 0 MeV
+#/gate/physics/processes/IonInelastic/setDataSet G4IonsShenCrossSection GenericIon
+
+### SCINTILLATIONS
+#/gate/physics/addProcess Scintillation
+#/gate/physics/addProcess OpticalRayleigh
+#/gate/physics/addProcess OpticalAbsorption
+#/gate/physics/addProcess OpticalBoundary
+
+/gate/physics/processList Enabled
+/gate/physics/processList Initialized
+
+###################
+###   OPTIONS   ###
+###################
+#/gate/physics/setEMin 0.1 keV
+#/gate/physics/setEMax 10 MeV
+#/gate/physics/setDEDXBinning 220
+#/gate/physics/setLambdaBinning 220
+
+
+
+# Cuts for particle in NEMACylinder
+
+#/gate/physics/Gamma/SetCutInRegion ActiveZone 5 cm # ????
+#/gate/physics/Electron/SetCutInRegion ActiveZone 5 cm # ????
+#/gate/physics/Positron/SetCutInRegion ActiveZone 5 cm # ????
+#/gate/physics/Gamma/SetCutInRegion phantom 5 cm
+#/gate/physics/Positron/SetCutInRegion phantom 5 cm
+#/gate/physics/Electron/SetCutInRegion phantom 5 cm
+
+#/gate/physics/Gamma/SetCutInRegion     world  10.0 cm
+#/gate/physics/Positron/SetCutInRegion phantom 10 cm
+#/gate/physics/Electron/SetCutInRegion phantom 10 cm
+
+
+
+
+
+
+

@@ -1,0 +1,110 @@
+/run/verbose 0
+/tracking/verbose 0
+/event/verbose 0
+/gate/geometry/setMaterialDatabase /home/youness/Documents/Gate_exos/Basic3GammaVox/Macros/GateMaterials_Xemis.db
+/gate/world/geometry/setXLength 500 cm
+/gate/world/geometry/setYLength 500 cm
+/gate/world/geometry/setZLength 500 cm
+/gate/world/setMaterial Air
+/gate/world/vis/setVisible 0
+/gate/world/vis/forceSolid
+/gate/world/vis/setColor white
+/control/execute /home/youness/Documents/Gate_exos/Basic3GammaVox/Macros/mMR_Sphere_scanner.mac
+/gate/world/geometry/setXLength 1800. mm
+/gate/world/geometry/setYLength 1800. mm
+/gate/world/geometry/setZLength 3000. mm
+/gate/world/setMaterial Air
+/gate/world/vis/setVisible 0
+/gate/world/vis/forceSolid
+/gate/world/vis/setColor white
+/gate/world/daughters/name cylindricalPET
+/gate/world/daughters/insert sphere
+/gate/cylindricalPET/setMaterial LSO
+/gate/cylindricalPET/geometry/setRmax 100.8 cm
+/gate/cylindricalPET/geometry/setRmin 32.8 cm
+/gate/cylindricalPET/vis/forceWireframe
+/gate/cylindricalPET/attachCrystalSD
+/gate/systems/cylindricalPET/describe
+/control/execute /home/youness/Documents/Gate_exos/Basic3GammaVox/Phantoms/Phantom1/Macro_Attenuation.mac
+/gate/world/daughters/name phantom
+/gate/world/daughters/insert ImageRegularParametrisedVolume
+/gate/phantom/geometry/setRangeToMaterialFile /home/youness/Documents/Gate_exos/Basic3GammaVox/Phantoms/Phantom1/attenuation_range_xcat.dat
+/gate/phantom/geometry/setImage /home/youness/Documents/Gate_exos/Basic3GammaVox/Phantoms/Phantom1/Phan1_Attenuation.h33
+/gate/phantom/placement/setTranslation 0. 0. 0. mm
+/gate/phantom/attachPhantomSD
+/control/execute /home/youness/Documents/Gate_exos/Basic3GammaVox/Macros/my_physics.mac
+/gate/physics/addPhysicsList emstandard_opt4
+/gate/physics/addProcess RadioactiveDecay
+/gate/physics/addProcess Decay e+
+/gate/physics/addProcess G4PositronAnnihilation e+
+/gate/physics/processes/G4PositronAnnihilation/setModel StandardModel
+/gate/physics/removeProcess PhotoElectric
+/gate/physics/removeProcess Compton
+/gate/physics/removeProcess Compton gamma
+/gate/physics/removeProcess Bremsstrahlung gamma
+/gate/physics/removeProcess RayleighScattering gamma
+/gate/physics/removeProcess GammaConversion gamma
+/gate/physics/removeProcess ElectronIonisation e+
+/gate/physics/removeProcess ElectronIonisation e-
+/gate/physics/removeProcess ElectronIonisation
+/gate/physics/removeProcess IonIonisation
+/gate/physics/removeProcess HadronElastic
+/gate/physics/processList Enabled
+/gate/physics/processList Initialized
+/gate/physics/Gamma/SetCutInRegion world 10.0 cm
+/gate/physics/Positron/SetCutInRegion phantom 10 cm
+/gate/physics/Electron/SetCutInRegion phantom 10 cm
+/control/execute /home/youness/Documents/Gate_exos/Basic3GammaVox/Macros/phase_space_actor.mac
+/gate/actor/addActor PhaseSpaceActor MyActor
+/gate/actor/MyActor/attachTo cylindricalPET
+/gate/actor/MyActor/addFilter particleFilter
+/gate/actor/MyActor/particleFilter/addParticle gamma
+/gate/actor/MyActor/addFilter energyFilter
+/gate/actor/MyActor/energyFilter/setEmin 510 keV
+/gate/actor/MyActor/enableProductionProcess false
+/gate/actor/MyActor/storeAllStep true
+/gate/actor/MyActor/enableEkine true
+/gate/actor/MyActor/enableXPosition true
+/gate/actor/MyActor/enableYPosition true
+/gate/actor/MyActor/enableZPosition true
+/gate/actor/MyActor/enableXDirection false
+/gate/actor/MyActor/enableYDirection false
+/gate/actor/MyActor/enableZDirection false
+/gate/actor/MyActor/enableProductionVolume false
+/gate/actor/MyActor/enableParticleName false
+/gate/actor/MyActor/enableWeight false
+/gate/actor/MyActor/enableTrackLength false
+/gate/actor/MyActor/enableTimeFromBeginOfEvent false
+/gate/actor/MyActor/enableTOut false
+/gate/actor/MyActor/enableMass false
+/gate/actor/MyActor/enableEmissionPoint true
+/gate/actor/MyActor/enablePrimaryEnergy false
+/gate/actor/MyActor/storeSecondaries false
+/gate/actor/MyActor/save /home/youness/Documents/Gate_exos/Basic3GammaVox/output/PhSps.root
+/gate/run/initialize
+/gate/physics/displayCuts
+/control/execute /home/youness/Documents/Gate_exos/Basic3GammaVox/Phantoms/Phantom1/Macro_Source.mac
+/gate/source/addSource voxel voxel
+/gate/source/voxel/reader/insert image
+/gate/source/voxel/imageReader/translator/insert range
+/gate/source/voxel/imageReader/rangeTranslator/readTable /home/youness/Documents/Gate_exos/Basic3GammaVox/Phantoms/Phantom1/activities_xcat.dat
+/gate/source/voxel/imageReader/rangeTranslator/describe 1
+/gate/source/voxel/setPosition -300 -300 -300 mm
+/gate/source/voxel/imageReader/readFile /home/youness/Documents/Gate_exos/Basic3GammaVox/Phantoms/Phantom1/Phan1_Activity.h33
+/gate/source/voxel/gps/particle ion
+/gate/source/voxel/gps/ion 21 44 0 0
+/gate/source/voxel/gps/energytype Mono
+/gate/source/voxel/gps/monoenergy 0.0 keV
+/gate/source/voxel/setForcedUnstableFlag true
+/gate/source/voxel/setForcedHalfLife 6586.26 s
+/gate/source/voxel/gps/angtype iso
+/gate/source/list
+/gate/random/setEngineSeed auto
+/gate/application/setTimeSlice 0.00001 s
+/gate/application/setTimeStart 0.00 s
+/gate/application/setTimeStop 0.00001 s
+/gate/application/startDAQ
+/vis/scene/notifyHandlers
+/grdm/verbose 0
+/grdm/allVolumes
+/vis/viewer/update

@@ -1,0 +1,6 @@
+6
+0 0 Air false 0.0 0.0 0.0 0.0 1.0
+1 4 Lung false 255. 255. 255. 1.0 1.0
+5 9 SpineBone false 255. 255. 255. 1.0 1.0
+10 86 Water false 0. 255. 0. 1.0 1.0
+400 1000 Water true 0. 255. 0. 1.0 1.0

@@ -1,0 +1,10 @@
+!INTERFILE  :=
+!matrix size [1] := 200
+!matrix size [2] := 200
+!name of data file := /homes/ymellak/Direct3G_f/Gate/Phantoms/Phantom999/Phan999_Activity.bin
+!number format := short float
+imagedata byte order := LITTLEENDIAN
+scaling factor (mm/pixel) [1] := 3.0
+scaling factor (mm/pixel) [2] := 3.0
+!number of slices := 100
+slice thickness (pixels) := 3.0
