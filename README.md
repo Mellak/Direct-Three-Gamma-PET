@@ -66,7 +66,7 @@ More figures are in [`figures/`](figures): mouse results, phantoms, MIN architec
 - The code does not correct the positron range. This limits small-animal imaging.
   Two other works in my thesis address the positron range:
   [Particles_Tracking_GAN](https://github.com/Mellak/Particles_Tracking_GAN) (fast GAN simulation of positron paths) and
-  [DDConv](https://github.com/Mellak/ddconv-prc) (positron range correction in image reconstruction; code coming soon).
+  [DDConv](https://github.com/Mellak/ddconv-prc) (positron range correction in image reconstruction).
 
 ## How to run
 
@@ -107,8 +107,6 @@ The result is `3DReco/test_results/Vox2VoxAtt_wo_norm_999.bin`. It takes about 1
 The script pads the volume by 50 slices on each side in z. Crop `[50:150]` to compare it with `EmissionImage_999.bin`.
 
 **Step 7: train the 3D CNN.** Run `python Train_Direct3g_example_wAtt.py`. Details: [`3DReco/ReadMe.md`](3DReco/ReadMe.md).
-> **Known problem:** the training script imports `SimulationDatasetAttenuation2_wo_norm`.
-> `DataLoading.py` does not define this class, so training stops with an `ImportError`.
 
 ## Citation
 

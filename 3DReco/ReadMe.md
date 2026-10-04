@@ -23,7 +23,7 @@
 
 ## Usage
 
-1. Prepare your dataset in the format expected by the `SimulationDatasetAttenuation2_wo_norm` class.
+1. Prepare your dataset in the format expected by the `SimulationDatasetAttenuation` class.
 2. Run the `Train_Direct3g_example_wAtt.py` script to train the model.
 3. Use the `Test_wAtt_Vox2Vox_no_norm3.py` script to test the trained model on new data.
 

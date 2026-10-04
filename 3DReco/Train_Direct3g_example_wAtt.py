@@ -9,7 +9,7 @@ from torch.autograd import Variable
 import pytorch_ssim
 
 from model_vox2vox import UNet3DWithAttenuation, Discriminator
-from DataLoading import SimulationDatasetAttenuation2_wo_norm
+from DataLoading import SimulationDatasetAttenuation
 
 
 # Check if CUDA is available and set the appropriate tensor type
@@ -173,8 +173,8 @@ if __name__ == '__main__':
     os.makedirs(save_dir_img, exist_ok=True)
 
     # Load datasets and data loaders
-    train_dataset = SimulationDatasetAttenuation2_wo_norm('/homes/ymellak/3DUnet3Gamma/DataSet', transform=True)
-    val_dataset = SimulationDatasetAttenuation2_wo_norm('/homes/ymellak/3DUnet3Gamma/ValDataSet', transform=True)
+    train_dataset = SimulationDatasetAttenuation('/homes/ymellak/3DUnet3Gamma/DataSet', transform=True)
+    val_dataset = SimulationDatasetAttenuation('/homes/ymellak/3DUnet3Gamma/ValDataSet', transform=True)
     train_loader = DataLoader(train_dataset, batch_size=batch_size, shuffle=True, num_workers=4)
     val_loader = DataLoader(val_dataset, batch_size=batch_size, shuffle=True, num_workers=4)
 
