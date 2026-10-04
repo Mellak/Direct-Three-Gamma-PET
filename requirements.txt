@@ -1,0 +1,11 @@
+# Third-party packages imported by the scripts in Python/ and 3DReco/.
+# Versions are not pinned (the original runs used the Singularity images
+# mentioned in Python/ReadMe.md); any recent release should work.
+numpy
+pandas
+scipy
+matplotlib
+torch
+
+# Only imported by 3DReco/Train_Direct3g_example_wAtt.py (needed for training, not for testing):
+pytorch-ssim
