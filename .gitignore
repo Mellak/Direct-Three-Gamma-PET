@@ -1,0 +1,29 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.eggs/
+build/
+dist/
+.venv/
+venv/
+env/
+.ipynb_checkpoints/
+.pytest_cache/
+.mypy_cache/
+
+# Editor history (VS Code "Local History" extension)
+.history/
+
+# R history
+.Rhistory
+.RData
+.Rapp.history
+.Rproj.user/
+
+# Geant4 / GATE history
+G4History.macro
+G4History*.macro
+
+# Generated outputs
+3DReco/test_results/
